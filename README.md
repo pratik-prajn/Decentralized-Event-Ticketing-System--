@@ -17,6 +17,11 @@ NFTickets is a next-generation decentralized ticketing platform built on Ethereu
 
 ## 🚀 Key Features  
 
+![WhatsApp Image 2025-09-05 at 01 28 06_964f8711](https://github.com/user-attachments/assets/944d79ae-c47d-4324-b3e4-f7011a92711e)
+
+![WhatsApp Image 2025-09-05 at 01 28 55_e09e225e](https://github.com/user-attachments/assets/209bece9-ce77-430f-aaae-2b917d9c2d57)
+![WhatsApp Image 2025-09-05 at 01 30 51_ee01c7f4](https://github.com/user-attachments/assets/50309829-d10b-47de-92e9-8566b9ec2627)
+
 ### 🧾 Event Creation & Management  
 - Create events with *name, date, ticket price, max supply, and IPFS metadata*  
 - Organizer Dashboard to manage all created events  
