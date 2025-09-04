@@ -1,0 +1,661 @@
+/* Global Styles - Light Theme */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #059669;
+  --pink: #ffc0cb; /* baby pink */
+  --pink-600: #ff9db0; /* deeper baby pink for contrast */
+  --pink-100: #ffe4ec; /* very light pink */
+  --dark: #f8fafc;
+  --darker: #ffffff;
+  --light: #374151;
+  --lighter: #111827;
+  --gray: #6b7280;
+  --error: #dc2626;
+  --success: #059669;
+  --card-bg: #f9fafb;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --hover-color: rgba(0, 0, 0, 0.05);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--darker);
+  color: var(--light);
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(120, 200, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+  padding: 2rem 2.5rem;
+  border-bottom: 2px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.025em;
+}
+
+.logo-icon {
+  font-size: 2.5rem;
+  animation: pulse 2s infinite;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(135deg, var(--pink), #ffd1dc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.wallet-info {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+/* Navigation Tabs - Modern Style */
+.app-navigation {
+  margin: 2.5rem 0 3.5rem;
+}
+
+.nav-tabs {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(248, 250, 252, 0.95));
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 0.75rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.nav-item {
+  padding: 1rem 2rem;
+  margin: 0.25rem;
+  cursor: pointer;
+  border-radius: 16px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  color: var(--light);
+  letter-spacing: 0.025em;
+}
+
+.nav-item:hover {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(255, 192, 203, 0.18));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  color: white;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4), 0 4px 10px rgba(37, 99, 235, 0.3);
+  transform: translateY(-1px);
+}
+
+.badge {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  background-color: var(--error);
+  color: white;
+  border-radius: 10px;
+  min-width: 1.5rem;
+  height: 1.5rem;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Status Message */
+.status-message {
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.status-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Section Titles */
+.section-title {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(135deg, var(--primary), var(--secondary)) padding-box,
+              linear-gradient(135deg, var(--primary), var(--secondary)) border-box;
+  border-image: linear-gradient(135deg, var(--primary), var(--secondary)) 1;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--lighter);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  border-radius: 2px;
+}
+
+/* Utils */
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 1.5rem 0;
+}
+
+.text-truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--gray);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(248, 250, 252, 0.8));
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 2px dashed rgba(255, 192, 203, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.empty-state::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(5, 150, 105, 0.05));
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(255, 192, 203, 0.1));
+  border-radius: 24px;
+}
+
+.empty-state-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+
+.empty-state-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--light);
+  position: relative;
+  z-index: 1;
+}
+
+.empty-state-text {
+  font-size: 1.1rem;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  line-height: 1.6;
+}
+
+/* Add this to App.css */
+button, [role="button"] {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+/* Ensure no iframe is blocking clicks */
+iframe {
+  pointer-events: none !important;
+}
+
+
+/* Add this to your existing App.css file */
+
+/* Logout Button */
+.logout-button {
+  background-color: transparent;
+  color: var(--gray);
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  margin-left: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 1px solid var(--border-color);
+}
+
+.logout-button:hover {
+  color: var(--error);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Update the wallet-info class to accommodate the logout button */
+.wallet-info {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+/* Add to your App.css file */
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-btn {
+  background-color: var(--dark);
+  color: var(--light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+  background-color: var(--card-bg);
+  transform: translateY(-2px);
+}
+
+.category-btn.active {
+  background-color: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.3);
+}
+
+
+/* Add this to your App.css file */
+
+.search-bar-container {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--light);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+}
+
+.search-input::placeholder {
+  color: var(--gray);
+}
+
+.search-clear-button {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--gray);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.search-clear-button:hover {
+  color: var(--light);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Update the empty state message */
+.empty-events-message {
+  grid-column: 1 / -1;
+  padding: 3rem;
+  text-align: center;
+  background-color: var(--dark);
+  border-radius: 16px;
+  border: 1px dashed var(--border-color);
+  color: var(--gray);
+  font-size: 1.1rem;
+}
+
+
+/* Add to your App.css file */
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.refresh-button {
+  background-color: var(--dark);
+  color: var(--gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.refresh-button:hover {
+  background-color: var(--card-bg);
+  color: var(--primary);
+  transform: rotate(30deg);
+}
+
+.refresh-button:active {
+  transform: rotate(180deg);
+}
+
+.help-button {
+  background-color: var(--dark);
+  color: var(--gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.help-button:hover {
+  background-color: var(--card-bg);
+  color: var(--primary);
+  transform: scale(1.05);
+}
+
+.help-button:active {
+  transform: scale(0.95);
+}
+
+/* Custom styles for contract interaction (not global) */
+.contract-interaction {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+.contract-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+.contract-address {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.contract-code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--lighter);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.contract-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.call-button, .send-button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.call-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.send-button {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+}
+
+.send-button:hover {
+  background-color: var(--secondary-dark);
+}
+
+/* Add this to your App.css file */
+
+/* Contract Interaction Section */
+.contract-interaction {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--border-color);
+}
+
+.contract-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--light);
+}
+
+.contract-address {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+}
+
+.contract-code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  font-size: 0.85rem;
+  color: var(--lighter);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.contract-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.call-button, .send-button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+}
+
+.call-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.send-button {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+}
+
+.send-button:hover {
+  background-color: var(--secondary-dark);
+}

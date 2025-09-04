@@ -1,0 +1,300 @@
+.tkmodal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+  /* Ensure the overlay doesn't scroll */
+  overflow: hidden;
+}
+
+.tkmodal-container {
+  background-color: var(--darker);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 550px;
+  max-height: 90vh;
+  /* Only have overflow on the modal content, not the modal itself */
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  animation: tkmodalFadeIn 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+}
+
+.tkmodal-content {
+  padding: 1.5rem;
+  /* Add overflow to the content area only */
+  overflow-y: auto;
+  /* Custom scrollbar for the content area */
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) var(--darker);
+}
+
+/* Custom scrollbar styling - apply to modal-content only */
+.tkmodal-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.tkmodal-content::-webkit-scrollbar-track {
+  background-color: var(--darker);
+  border-radius: 8px;
+}
+
+.tkmodal-content::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 8px;
+  border: 2px solid var(--darker);
+}
+
+.tkmodal-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--gray);
+}
+
+@keyframes tkmodalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tkmodal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  /* Ensure header stays fixed at top */
+  position: sticky;
+  top: 0;
+  background-color: var(--darker);
+  z-index: 5;
+}
+
+.tkmodal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--lighter);
+  margin: 0;
+}
+
+.tkmodal-close-btn {
+  background: none;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.tkmodal-close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--lighter);
+}
+
+.tkmodal-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.tkmodal-tab-btn {
+  background: none;
+  border: none;
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.tkmodal-tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.tkmodal-tab-btn--active {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: var(--primary);
+}
+
+.tkmodal-event-banner {
+  height: 120px;
+  background: linear-gradient(135deg, #4f46e5, #10b981);
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.tkmodal-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tkmodal-info-item h3 {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.tkmodal-info-item p {
+  font-size: 1.1rem;
+  color: var(--lighter);
+  font-weight: 600;
+}
+
+.tkmodal-price {
+  color: var(--secondary) !important;
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+}
+
+.tkmodal-manage-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tkmodal-section {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.tkmodal-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--lighter);
+}
+
+.tkmodal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tkmodal-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tkmodal-form-group label {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 600;
+}
+
+.tkmodal-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--light);
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.tkmodal-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.tkmodal-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tkmodal-btn {
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.tkmodal-btn--primary {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
+}
+
+.tkmodal-btn--primary:hover {
+  background-color: #3070db;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.tkmodal-btn--secondary {
+  background-color: var(--secondary);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.3);
+}
+
+.tkmodal-btn--secondary:hover {
+  background-color: #0ea572;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(16, 185, 129, 0.4);
+}
+
+.tkmodal-btn--danger {
+  background-color: var(--error);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(239, 68, 68, 0.3);
+}
+
+.tkmodal-btn--danger:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px -3px rgba(239, 68, 68, 0.4);
+}
+
+.tkmodal-divider {
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+.tkmodal-listing-info {
+  margin-bottom: 1rem;
+}
+
+.tkmodal-listing-info p {
+  margin-bottom: 0.5rem;
+  color: var(--light);
+}
+
+/* Add a class to make the body not scroll when modal is open */
+.tkmodal-body-lock {
+  overflow: hidden;
+}

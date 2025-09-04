@@ -1,0 +1,106 @@
+.calendar {
+  margin: 2rem 0 3rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(248,250,252,0.95));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.calendar-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cal-nav {
+  background: linear-gradient(135deg, var(--primary), var(--pink));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: 0 8px 24px rgba(255, 192, 203, 0.25);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  padding: 0.75rem;
+}
+
+.cal-dow {
+  text-align: center;
+  font-weight: 700;
+  color: var(--gray);
+  padding: 0.25rem 0;
+}
+
+.cal-cell {
+  min-height: 88px;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 10px;
+  padding: 6px;
+  position: relative;
+}
+
+.cal-out {
+  opacity: 0.45;
+  background: #fafafa;
+}
+
+.cal-daynum {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.cal-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 1.25rem;
+}
+
+.cal-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cal-badge.real {
+  background: rgba(37,99,235,0.1);
+  color: var(--lighter);
+}
+
+.cal-badge.sample {
+  background: rgba(255,192,203,0.25);
+  color: var(--lighter);
+}
+
+.cal-more {
+  color: var(--gray);
+  font-size: 0.75rem;
+}

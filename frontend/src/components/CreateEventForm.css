@@ -1,0 +1,77 @@
+.create-event-section {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+    color: var(--light);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-input {
+    background-color: var(--dark);
+    border: 1px solid var(--border-color);
+    color: var(--light);
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  }
+  
+  .form-submit {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.85rem 1.25rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3), 0 2px 4px -1px rgba(59, 130, 246, 0.2);
+  }
+  
+  .form-submit:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4), 0 4px 6px -2px rgba(59, 130, 246, 0.3);
+  }
+
+  /* Add this to CreateEventForm.css */
+
+.input-error {
+  border-color: var(--error) !important;
+  box-shadow: 0 0 0 1px var(--error) !important;
+}
+
+.error-message {
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
