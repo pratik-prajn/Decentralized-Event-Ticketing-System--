@@ -80,6 +80,8 @@ NFTickets is a next-generation decentralized ticketing platform built on Ethereu
 - Git  
 
 ### 🔧 Project Setup  
+![WhatsApp Image 2025-09-05 at 03 37 46_56123da3](https://github.com/user-attachments/assets/33224e9b-19c7-46d5-b70b-34d395c132a9)
+
 ```bash
 git clone https://github.com/BlockChainers/NFTickets.git
 cd NFTickets
