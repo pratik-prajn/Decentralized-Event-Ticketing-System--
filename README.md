@@ -89,7 +89,7 @@ Make sure you have the following installed on your system:
 
 ### 🔧 Installation  
 ![WhatsApp Image 2025-09-05 at 03 37 46_591243ff](https://github.com/user-attachments/assets/c69aaf88-6d73-4461-ae72-1561d5e83c5b)
-![WhatsApp Image 2025-09-05 at 03 41 49_aa5ab761](https://github.com/user-attachments/assets/e481c19c-205d-4678-86a1-f36b37707aa3)
+
 
 1. **Clone the Repository**  
    ```bash
