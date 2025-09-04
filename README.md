@@ -74,25 +74,20 @@ By leveraging **NFTs** and **smart contracts**, it delivers a **fraud-free, tran
 
 ## 🛠 Getting Started  
 
+Follow these steps to set up **EventHub Pro** locally:  
+
 ### ✅ Prerequisites  
-Ensure you have the following installed:  
-- **Node.js** v16+  
-- **npm** v8+  
-- **MetaMask** browser extension  
-- **Git**  
+Make sure you have the following installed on your system:  
+- [Node.js](https://nodejs.org/) (v16 or higher)  
+- [npm](https://www.npmjs.com/) (v8 or higher)  
+- [Git](https://git-scm.com/)  
+- [MetaMask](https://metamask.io/) browser extension  
 
-### 🔧 Project Setup  
+---
 
-Clone the repository and install dependencies:  
+### 🔧 Installation  
 
-```bash
-# Clone the repository
-git clone https://github.com/BlockChainers/NFTickets.git
-cd NFTickets
-
-# Install root dependencies
-npm install
-
-# Install frontend dependencies
-cd frontend
-npm install
+1. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/BlockChainers/NFTickets.git
+   cd NFTickets
