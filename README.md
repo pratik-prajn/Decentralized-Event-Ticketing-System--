@@ -1,4 +1,4 @@
-# 🎟 NFTickets — Decentralized Event Ticketing System  
+# 🎟 EventHub Pro — Decentralized Event Ticketing System  
 
 NFTickets is a next-generation decentralized ticketing platform built on Ethereum. By leveraging NFTs and smart contracts, it delivers a *fraud-free, transparent, and secure* ticketing experience — removing dependency on third parties and preventing ticket scams.  
 
